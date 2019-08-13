@@ -1,1 +1,3 @@
 include Modules.app
+
+include Modules.baseData, Modules.baseDomain, Modules.basePresentation

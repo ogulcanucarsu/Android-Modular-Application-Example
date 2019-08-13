@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+
 android {
     compileSdkVersion Config.compileSdkVersion
     defaultConfig {
@@ -32,4 +33,10 @@ dependencies {
     testİmplementation TestLibraries.junit
     androidTestİmplementation TestLibraries.testRunner
     androidTestİmplementation TestLibraries.espresso
+
+
+    //Base
+    implementation project(Modules.baseData)
+    implementation project(Modules.baseDomain)
+    implementation project(Modules.basePresentation)
 }
