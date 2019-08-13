@@ -28,6 +28,7 @@ object Versions{
     const val okHttpLoggingInterceptorVersion = "3.8.0"
     const val retrofitCoroutineAdapterVersion = "0.9.2"
     const val okHttpVersion = "3.10.0"
+    const val javaxAnnotationVersion = "10.0-b28"
 
 
 }

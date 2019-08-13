@@ -1,9 +1,7 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion Config.compileSdkVersion
@@ -26,14 +24,23 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Core Lib.
+    kapt CoreLibraries.dagger2Compiler
+    kapt CoreLibraries.dagger2AndroidProcessor
+    testAnnotationProcessor CoreLibraries.dagger2Compiler
+    compileOnly CoreLibraries.javaxAnnotation
     implementation CoreLibraries.kotlin
-    implementation BaseLibraries.appCompat
-    implementation BaseLibraries.constraitLayout
-    implementation BaseLibraries.recyclerView
+
+    //Test Lib.
     testİmplementation TestLibraries.junit
     androidTestİmplementation TestLibraries.testRunner
     androidTestİmplementation TestLibraries.espresso
 
+    //Base Lib.
+    implementation BaseLibraries.appCompat
+    implementation BaseLibraries.constraitLayout
+    implementation BaseLibraries.recyclerView
 
     //Base
     implementation project(Modules.baseData)
