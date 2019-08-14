@@ -1,5 +1,6 @@
 object Versions{
     //Base Lib. Version
+    const val xVersion = "1.0.0"
     const val appCompat = "28.0.0"
     const val constraitLayout = "1.1.3"
     const val recyclerView = "27.1.1"
@@ -7,6 +8,8 @@ object Versions{
     //Helper Lib. Version
     const val lottieVersion = "2.5.3"
     const val easyFlipViewViewPager = "1.0.0"
+    const val archVersion = "2.2.0-alpha01"
+
 
     //Test Lib. Version
     const val testRunner = "1.0.2"

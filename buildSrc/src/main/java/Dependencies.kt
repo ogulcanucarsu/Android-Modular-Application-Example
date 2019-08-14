@@ -1,7 +1,8 @@
 object BaseLibraries {
-    const val appCompat = "com.android.support:appcompat-v7:${Versions.appCompat}"
-    const val constraitLayout = "com.android.support.constraint:constraint-layout:${Versions.constraitLayout}"
-    const val recyclerView = "com.android.support:recyclerview-v7:${Versions.recyclerView}"
+    const val appCompat = "androidx.appcompat:appcompat:${Versions.xVersion}"
+    const val constraitLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraitLayout}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.xVersion}"
+    const val supportDesign = "com.google.android.material:material:${Versions.xVersion}"
 }
 
 object TestLibraries {
@@ -14,6 +15,9 @@ object HelperLibraries {
     const val lottie = "com.airbnb.android:lottie:${Versions.lottieVersion}"
     const val easyFlipViewPager =
         "com.wajahatkarim3.easyflipviewpager:easyflipviewpager:${Versions.easyFlipViewViewPager}"
+
+    const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.archVersion}"
+    const val lifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.archVersion}"
 
 }
 
