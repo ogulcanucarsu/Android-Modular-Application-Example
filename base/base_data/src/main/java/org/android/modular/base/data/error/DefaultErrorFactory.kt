@@ -22,14 +22,11 @@ class DefaultErrorFactory @Inject constructor(private val context: Context) : Er
         if (errors != null && errors.isNotEmpty()) {
             for (statusError in errors) {
                 val apiError = createApiError(statusError)
-                if (apiError is Error.MultipleSessionError) {
-                    return apiError
-                }
                 safeErrorList.add(apiError)
             }
         }
 
-        return org.android.modular.base.data.error.Error.ApiErrors(safeErrorList)
+        return Error.ApiErrors(safeErrorList)
     }
 
     override fun createUnknownError(): Error = Error.UnknownError("Bilinmeyen Hata Oluştu.")
@@ -49,9 +46,5 @@ class DefaultErrorFactory @Inject constructor(private val context: Context) : Er
     override fun createConnectionError() = Error.ConnectionError()
 
     override fun createBusinessError(code: Int, message: String?) = Error.BusinessError()
-
-    override fun createMultipleSessionError(message: String?) = Error.MultipleSessionError(message)
-
-    override fun createUnderConstructionError(message: String?) = Error.UnderConstructionError(message)
 
 }

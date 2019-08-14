@@ -26,8 +26,5 @@ interface ErrorFactory {
 
     fun createBusinessError(code: Int = 1, message: String? = null): Error
 
-    fun createMultipleSessionError(message: String?): Error
-
-    fun createUnderConstructionError(message: String?): Error
 }
 

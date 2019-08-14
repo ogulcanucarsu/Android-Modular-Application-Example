@@ -14,12 +14,6 @@ sealed class Error {
 
     data class ExceptionalError(val message: String?) : Error()
 
-    data class KobilError(val code: String? = null) : Error()
-
-    data class MultipleSessionError(val message: String?) : Error()
-
-    data class UnderConstructionError(val message: String?) : Error()
-
     class ConnectionError : Error()
 
     class EmptyCacheResult : Error()
