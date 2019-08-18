@@ -1,0 +1,9 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion Config.compileSdkVersion
+}
+
+dependencies {
+    api project (Modules.baseData)
+}
