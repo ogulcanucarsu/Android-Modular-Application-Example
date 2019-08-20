@@ -1,6 +1,6 @@
 package org.android.modular.base.data.coroutines
 
-import android.support.annotation.CallSuper
+import androidx.annotation.CallSuper
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.async

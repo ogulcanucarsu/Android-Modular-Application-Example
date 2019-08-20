@@ -1,6 +1,6 @@
 package org.android.modular.base.data.datasource
 
-import android.support.annotation.CallSuper
+import androidx.annotation.CallSuper
 import org.android.modular.base.data.coroutines.AsyncManager
 import org.android.modular.base.data.coroutines.DefaultAsyncManager
 import org.android.modular.base.data.model.BaseRepository

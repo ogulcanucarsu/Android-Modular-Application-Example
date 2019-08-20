@@ -1,6 +1,5 @@
 package org.android.modular.base.data.injection.modules
 
-import android.content.Context
 import dagger.Module
 import dagger.Provides
 import org.android.modular.base.data.error.DefaultErrorFactory
@@ -12,7 +11,7 @@ class ErrorFactoryModule {
 
     @Provides
     @Singleton
-    internal fun provideErrorFactory(context: Context): ErrorFactory =
-        DefaultErrorFactory(context.applicationContext)
+    internal fun provideErrorFactory(): ErrorFactory =
+        DefaultErrorFactory()
 
 }

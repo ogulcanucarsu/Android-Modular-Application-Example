@@ -2,19 +2,17 @@ package org.android.modular.base.data.injection.modules
 
 import dagger.Module
 import dagger.Provides
+import org.android.modular.base.data.error.DefaultErrorFactory
+import org.android.modular.base.data.error.ErrorFactory
 import org.android.modular.base.data.preconditions.AndroidPreconditions
 import org.android.modular.base.data.preconditions.DefaultAndroidPreconditions
 import javax.inject.Singleton
 
-@Module(
-    includes = [CoroutineManagerModule::class,
-        CoroutineDispatcherModule::class,
-        ErrorFactoryModule::class]
-)
+@Module
 class CoreModule {
 
     @Provides
     @Singleton
-    fun provideAndroidPreconditions(): AndroidPreconditions = DefaultAndroidPreconditions()
+    internal fun provideErrorFactory(): ErrorFactory = DefaultErrorFactory()
 
 }

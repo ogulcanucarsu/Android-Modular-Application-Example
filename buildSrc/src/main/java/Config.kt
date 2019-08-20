@@ -5,3 +5,10 @@ object Config{
     const val compileSdkVersion = Versions.compileSdkVersion
     const val testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
 }
+
+/*
+ * Flavor Dimensions
+ */
+object Dimensions {
+    const val default = "default"
+}

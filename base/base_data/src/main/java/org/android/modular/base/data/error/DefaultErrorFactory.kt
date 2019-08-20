@@ -1,9 +1,8 @@
 package org.android.modular.base.data.error
 
-import android.content.Context
 import javax.inject.Inject
 
-class DefaultErrorFactory @Inject constructor(private val context: Context) : ErrorFactory {
+class DefaultErrorFactory @Inject constructor() : ErrorFactory {
 
     override fun createApiError(code: String, messages: String) =
         Error.ApiError(code, messages)

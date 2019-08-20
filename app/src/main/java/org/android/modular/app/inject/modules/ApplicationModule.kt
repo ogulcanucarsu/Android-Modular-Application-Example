@@ -4,8 +4,11 @@ import android.content.Context
 import dagger.Module
 import dagger.Provides
 import org.android.modular.app.ModularApp
+import org.android.modular.base.data.injection.modules.CoreModule
 
-@Module
+@Module(
+    includes = [CoreModule::class]
+)
 class ApplicationModule {
 
     @Provides

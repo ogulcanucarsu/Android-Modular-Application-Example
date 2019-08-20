@@ -1,9 +1,4 @@
-apply plugin: 'com.android.library'
-
-android {
-    compileSdkVersion Config.compileSdkVersion
-}
-
+apply from: "$rootDir/common-android-library.gradle"
 
 dependencies {
 
