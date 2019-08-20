@@ -23,8 +23,9 @@ class ModularApp : Application(), HasActivityInjector{
     override fun activityInjector(): AndroidInjector<Activity> = dispatchingAndroidInjector
 
     private fun inject(){
-        DaggerAppComponent.factory()
-            .create(this)
+        DaggerAppComponent.builder()
+            .application(this)
+            .build()
             .inject(this)
     }
 
