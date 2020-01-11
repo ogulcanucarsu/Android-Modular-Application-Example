@@ -7,11 +7,16 @@ import android.view.MenuItem
 import androidx.annotation.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
+import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.support.HasSupportFragmentInjector
 import org.android.modular.base.presentation.Constants
 import org.android.modular.base.presentation.R
 import org.android.modular.base.presentation.navigation.UiNavigation
+import javax.inject.Inject
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
     @LayoutRes
     abstract fun getLayoutRes(): Int
@@ -28,6 +33,11 @@ abstract class BaseActivity : AppCompatActivity() {
     open val uiNavigation = UiNavigation.BACK
 
     open val shouldOnBackPressedWork = true
+
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
+
+    override fun supportFragmentInjector(): AndroidInjector<Fragment> = dispatchingAndroidInjector
 
     @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,9 +97,6 @@ abstract class BaseActivity : AppCompatActivity() {
             }
             UiNavigation.NONE -> {
                 supportActionBar?.setDisplayHomeAsUpEnabled(false)
-            }
-            else -> {
-                supportActionBar?.setDisplayHomeAsUpEnabled(true)
             }
         }
     }

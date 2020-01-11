@@ -11,6 +11,9 @@ class ApiConstants private constructor() {
 
         //End-Point-Type
         const val ENDPOINT_TYPE = "end.point.type"
+
+        //data format
+        const val FORMAT = "json"
     }
 
     enum class EndPoint {

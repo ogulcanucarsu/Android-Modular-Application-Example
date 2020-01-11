@@ -1,4 +1,4 @@
-package org.android.modular.app.base.navigation.navigation
+package org.android.modular.app.base.navigation.navigations
 
 import android.content.Intent
 import androidx.annotation.IdRes
