@@ -4,9 +4,9 @@
 __Arthitecture__
 
 ```
-- MVVM
-- Modularazation
-- Clean Arthitecture
+  1-MVVM
+  2-Modularazation
+  3-Clean Arthitecture
 ```
 __Pattern__
 
