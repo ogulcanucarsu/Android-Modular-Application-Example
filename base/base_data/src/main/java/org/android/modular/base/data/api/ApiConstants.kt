@@ -14,6 +14,9 @@ class ApiConstants private constructor() {
 
         //data format
         const val FORMAT = "json"
+
+        //url
+        const val NAME_URL = "url"
     }
 
     enum class EndPoint {
